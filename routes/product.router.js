@@ -40,7 +40,7 @@ productRouter.post("/addProduct", async(req, res) => {
 productRouter.get("/getProduct", async(req, res) => {
     try{
         const productData = await ProductModel.find();
-        res.status(200).json({msg: "product:", productData});
+        res.status(200).json({products:productData});
     }
     catch(err){
         res.status(400).json({msg: "failed to get products!", err});
