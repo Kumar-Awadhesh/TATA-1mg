@@ -20,7 +20,7 @@ loginRouter.post("/login", async(req, res) => {
         })
     }
     catch(err){
-        res.status(400).json({msg: "Login Failed!", err});
+        res.status(400).json({msg: "Invalid Email!", err});
     }
 })
 
